@@ -14,24 +14,8 @@ Find the source code here: [XrayR-project/XrayR](https://github.com/XrayR-projec
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/XrayR-project/XrayR-release/master/install.sh)
 ```
-# Docker 安装
-
-```
-docker pull ghcr.io/xrayr-project/xrayr:latest && docker run --restart=always --name xrayr -d -v ${PATH_TO_CONFIG}/config.yml:/etc/XrayR/config.yml --network=host ghcr.io/xrayr-project/xrayr:latest
-```
-
-# Docker compose 安装
-0. 安装docker-compose: 
-```
-curl -fsSL https://get.docker.com | bash -s docker
-curl -L "https://github.com/docker/compose/releases/download/1.26.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
-```
-1. `git clone https://github.com/XrayR-project/XrayR-release`
-2. `cd XrayR-release`
-3. 编辑config。
+编辑config。
 配置文件基本格式如下，Nodes下可以同时添加多个面板，多个节点配置信息，只需添加相同格式的Nodes item即可。
-4. 启动docker：`docker-compose up -d`
 ```
 Log:
   Level: none # Log level: none, error, warning, info, debug 
@@ -108,11 +92,4 @@ Nodes:
   #       DNSEnv: # DNS ENV option used by DNS provider
   #         ALICLOUD_ACCESS_KEY: aaa
   #         ALICLOUD_SECRET_KEY: bbb
-```
-
-## Docker compose升级
-在docker-compose.yml目录下执行：
-```
-docker-compose pull
-docker-compose up -d
 ```
