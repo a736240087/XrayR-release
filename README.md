@@ -11,7 +11,7 @@ Find the source code here: [a736240087/XrayR](https://github.com/a736240087/Xray
 # 一键安装
 
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/XrayR-project/XrayR-release/master/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/a736240087/XrayR-release/main/install.sh)
 ```
 编辑config。
 配置文件基本格式如下，Nodes下可以同时添加多个面板，多个节点配置信息，只需添加相同格式的Nodes item即可。
